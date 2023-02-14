@@ -34,28 +34,37 @@
             <a href="index.html" class="header__logo">
                 <img src="./svg/logo-white.svg" alt="NOQO">
             </a>
-            <div class="header__wrapper">
-                <div class="header__lang">Eng</div>
-                <div class="header__icon header__icon-search">
-                    <img src="./svg/magnific-white.svg" alt="Search">
-                </div>
+            <div class="header__wrapper header__wrapper_row">
+                <div class="header__lang">eng</div>
                 <a href="favourites.html" class="header__icon header__icon-heart">
                     <img src="./svg/heart-fill.svg" alt="Favourites">
                 </a>
+                <div class="header__icon header__icon-search">
+                    <img src="./svg/magnific-white.svg" alt="Search">
+                </div>
             </div>
         </header>
         <div class="app-page favourites">
             <div class="app-page__leftside">
                 <div class="app-page__menu">
-                    <a class="app-page__menu-item" href="catalog.html#new">Новинки</a>
-                    <a class="app-page__menu-item" href="catalog.html#disposable">Одноразовые</a>
-                    <a class="app-page__menu-item" href="catalog.html#rechargeable">Перезаряжаемые</a>
-                    <a class="app-page__menu-item" href="catalog.html#pods">Поды</a>
-                    <a class="app-page__menu-item" href="catalog.html#devices">Устройства</a>
+                    <a class="app-page__menu-item" href="catalog.html#new">новинки</a>
+                    <a class="app-page__menu-item" href="catalog.html#disposable">одноразовые</a>
+                    <a class="app-page__menu-item" href="catalog.html#rechargeable">перезаряжаемые</a>
+                    <a class="app-page__menu-item" href="catalog.html#pods">поды</a>
+                    <a class="app-page__menu-item" href="catalog.html#devices">устройства</a>
                 </div>
             </div>
             <div class="app-page__main">
                 <div class="catalog__main">
+                    <div class="catalog__categories">
+                        <a href="catalog.html" class="catalog__category">500</a>
+                        <a href="catalog.html" class="catalog__category">1500</a>
+                        <a href="catalog.html" class="catalog__category">2000</a>
+                        <a href="catalog.html" class="catalog__category">2500</a>
+                        <a href="catalog.html" class="catalog__category">4000</a>
+                        <a href="catalog.html" class="catalog__category">5000</a>
+                    </div>
+                    <div class="catalog__preview" style="background-image: url('./img/bg.jpg')"></div>
                     <div id="new" class="catalog__items">
                         <a href="product.html" class="catalog__item">
                             <div class="catalog__item-favourite">
@@ -65,7 +74,7 @@
                                 <img src="./img/product1.jpg" alt="Product name">
                             </div>
                             <div class="catalog__item-text">
-                                <div class="catalog__item-cat">Одноразовые</div>
+                                <div class="catalog__item-cat">одноразовые</div>
                                 <div class="catalog__item-name">Морозный Ананас</div>
                             </div>
                         </a>
@@ -77,7 +86,7 @@
                                 <img src="./img/product2.jpg" alt="Product name">
                             </div>
                             <div class="catalog__item-text">
-                                <div class="catalog__item-cat">Одноразовые</div>
+                                <div class="catalog__item-cat">одноразовые</div>
                                 <div class="catalog__item-name">Банановый Сорбет</div>
                             </div>
                         </a>
@@ -89,7 +98,7 @@
                                 <img src="./img/product7.jpg" alt="Product name">
                             </div>
                             <div class="catalog__item-text">
-                                <div class="catalog__item-cat">Одноразовые</div>
+                                <div class="catalog__item-cat">одноразовые</div>
                                 <div class="catalog__item-name">Клубника ледяная</div>
                             </div>
                         </a>
@@ -101,7 +110,7 @@
                                 <img src="./img/product10.jpg" alt="Product name">
                             </div>
                             <div class="catalog__item-text">
-                                <div class="catalog__item-cat">Одноразовые</div>
+                                <div class="catalog__item-cat">одноразовые</div>
                                 <div class="catalog__item-name">Лимонад</div>
                             </div>
                         </a>
@@ -113,7 +122,7 @@
                                 <img src="./img/product8.jpg" alt="Product name">
                             </div>
                             <div class="catalog__item-text">
-                                <div class="catalog__item-cat">Одноразовые</div>
+                                <div class="catalog__item-cat">одноразовые</div>
                                 <div class="catalog__item-name">Морозный арбуз</div>
                             </div>
                         </a>
@@ -122,10 +131,10 @@
             </div>
             <div class="app-page__rightside">
                 <div class="app-page__menu">
-                    <a href="#">Telegram</a>
-                    <a href="map.html">Где купить</a>
-                    <a href="#">Контакты</a>
-                    <a href="#">Презентация</a>
+                    <a href="#">telegram</a>
+                    <a href="map.html">где купить</a>
+                    <div class="app-page__menu-contacts">контакты</div>
+                    <a href="#">презентация</a>
                 </div>
             </div>
         </div>
@@ -162,7 +171,7 @@
         <div class="warning-banner">
             <img src="./img/warning.png" alt="Warning">
         </div>
-        <div class="opt-client">Оптовый клиент</div>
+        <div class="opt-client">оптовый клиент</div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="dist/all.js?cb=1675348494832"></script>
     </body>

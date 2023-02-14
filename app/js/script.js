@@ -106,6 +106,8 @@ if (document.querySelector('.footer')) {
             } else if (event.deltaY < 0) {
                 deactiveSearch()
             }
+        } else {
+            document.querySelector('.footer').classList.remove('opened')
         }
     })
 }
@@ -114,6 +116,23 @@ if (document.querySelector('.product__description-title')) {
     document.querySelector('.product__description-title').addEventListener('click', () => {
         document.querySelector('.product__description').classList.toggle('active')
     })
+}
+
+if (document.querySelector('.product__like')) {
+    document.querySelector('.product__like').addEventListener('click', () => {
+        document.querySelector('.product__like').classList.toggle('active')
+    })
+}
+
+if (document.querySelector('.catalog__item')) {
+    document.querySelectorAll('.catalog__item').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            document.querySelector('.catalog__preview').classList.add('active')
+        })
+        element.addEventListener('mouseleave', () => {
+            document.querySelector('.catalog__preview').classList.remove('active')
+        })
+    });
 }
 
 if (document.querySelector('.product__slider')) {
@@ -129,7 +148,12 @@ if (document.querySelector('.product__slider')) {
             clickable: true,
         },
     });
+}
 
+if (document.querySelector('.app-page__menu-contacts')) {
+    document.querySelector('.app-page__menu-contacts').addEventListener('click', () => {
+        document.querySelector('.footer').classList.add('opened')
+    })
 }
 
 function initMap() {
@@ -568,7 +592,8 @@ function initMap() {
                 // icon: markerImage,
                 position: new google.maps.LatLng(element.position.lat,element.position.lng),
                 map: map,
-                title: element.title
+                title: element.title,
+                description: element.description
             })
             bounds.extend(marker.position)
             google.maps.event.addListener(marker, 'click', function() {
