@@ -24,12 +24,11 @@ if (document.querySelectorAll('.catalog__items').length) {
     let sections = document.querySelectorAll('.catalog__items')
     function changeCurrentSection() {
         let scrollTop = window.scrollY
-        Array.from(sections).forEach((el, key) => {
-            let element = sections[key]
+        for (var element of Array.from(sections)) {
             if (element.offsetTop <= scrollTop + 100 && currentSection !== element.id) {
                 currentSection = element.id
             }
-        })
+        }
         if (document.querySelector('.app-page__menu-item.active')) {
             document.querySelector('.app-page__menu-item.active').classList.remove('active')
         }
