@@ -1,5 +1,5 @@
 if (document.querySelector('.homepage__swiper')) {
-    const homepageSwiper = new Swiper('.homepage__swiper', {
+    let homepageSwiper = new Swiper('.homepage__swiper', {
         loop: true,
         speed: 1000,
         autoplay: {
@@ -7,8 +7,8 @@ if (document.querySelector('.homepage__swiper')) {
         },
     });
     
-    const homePagePrev = document.querySelector('.homepage__arrow-prev')
-    const homePageNext = document.querySelector('.homepage__arrow-next')
+    let homePagePrev = document.querySelector('.homepage__arrow-prev')
+    let homePageNext = document.querySelector('.homepage__arrow-next')
     
     homePagePrev.addEventListener('click', () => {
         homepageSwiper.slidePrev()
@@ -21,7 +21,7 @@ if (document.querySelector('.homepage__swiper')) {
 
 if (document.querySelectorAll('.catalog__items').length) {
     let currentSection = 'new'
-    const sections = document.querySelectorAll('.catalog__items')
+    let sections = document.querySelectorAll('.catalog__items')
     function changeCurrentSection() {
         let scrollTop = window.scrollY
         Array.from(sections).forEach((el, key) => {
@@ -46,7 +46,7 @@ if (document.querySelectorAll('.catalog__items').length) {
 
 if (document.querySelector('.favourites')) {
     if (document.querySelector('.catalog__item-favourite')) {
-        const hearts = document.querySelectorAll('.catalog__item-favourite')
+        let hearts = document.querySelectorAll('.catalog__item-favourite')
         Array.from(hearts).forEach(item => {
             item.addEventListener('click', event => {
                 event.preventDefault();
@@ -60,11 +60,11 @@ if (document.querySelector('.favourites')) {
 
 if (document.querySelector('.search')) {
     let scrollDistance = 0
-    const activeSearch = () => {
+    let activeSearch = () => {
         document.querySelector('.search').classList.add('opened')
         document.querySelector('#search').focus()
     }
-    const deactiveSearch = () => {
+    let deactiveSearch = () => {
         scrollDistance = 0
         document.querySelector('.search').classList.remove('opened')
     }
@@ -91,10 +91,10 @@ if (document.querySelector('.search')) {
 
 if (document.querySelector('.footer')) {
     let scrollDistance = 0
-    const activeSearch = () => {
+    let activeSearch = () => {
         document.querySelector('.footer').classList.add('opened')
     }
-    const deactiveSearch = () => {
+    let deactiveSearch = () => {
         scrollDistance = 0
         document.querySelector('.footer').classList.remove('opened')
     }
@@ -136,7 +136,7 @@ if (document.querySelector('.catalog__item')) {
 }
 
 if (document.querySelector('.product__slider')) {
-    const homepageSwiper = new Swiper('.product__slider', {
+    let homepageSwiper = new Swiper('.product__slider', {
         loop: true,
         speed: 1000,
         autoplay: {
@@ -528,7 +528,7 @@ function initMap() {
     
         map.mapTypes.set('Styled', styledMapType)
 
-        const markers = [{
+        let markers = [{
             title: 'Магазин',
             description: `
                 <p>Москва, Тишинская площадь, д.1 стр.1<br>
