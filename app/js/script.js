@@ -126,7 +126,7 @@ if (document.querySelector('.product__like')) {
 
 if (document.querySelector('.catalog__item')) {
     document.querySelectorAll('.catalog__item').forEach(element => {
-        element.addEventListener('mouseenter', () => {
+        element.addEventListener('mouseover', () => {
             document.querySelector('.catalog__preview').classList.add('active')
         })
         element.addEventListener('mouseleave', () => {
