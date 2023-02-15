@@ -583,13 +583,13 @@ function initMap() {
 
         markers.forEach(element => {
             let markerImage = new google.maps.MarkerImage(
-                './img/img1.jpg',
-                new google.maps.Size(element.icon.width,element.icon.height),
+                './img/ymaps-red.jpg',
+                new google.maps.Size(37,42),
                 new google.maps.Point(0,0),
                 new google.maps.Point(element.icon.x, element.icon.y)
             )
             let marker = new google.maps.Marker({
-                // icon: markerImage,
+                icon: markerImage,
                 position: new google.maps.LatLng(element.position.lat,element.position.lng),
                 map: map,
                 title: element.title,
