@@ -22,25 +22,27 @@ if (document.querySelector('.homepage__swiper')) {
 if (document.querySelectorAll('.catalog__items').length) {
     let currentSection = 'new'
     let sections = document.querySelectorAll('.catalog__items')
-    function changeCurrentSection() {
-        let scrollTop = window.scrollY
-        for (var element of Array.from(sections)) {
-            if (element.offsetTop <= scrollTop + 100 && currentSection !== element.id) {
-                currentSection = element.id
+    if (sections && sections.length > 0) {
+        function changeCurrentSection() {
+            let scrollTop = window.scrollY
+            for (var element of Array.from(sections)) {
+                if (element.offsetTop <= scrollTop + 100 && currentSection !== element.id) {
+                    currentSection = element.id
+                }
             }
+            if (document.querySelector('.app-page__menu-item.active')) {
+                document.querySelector('.app-page__menu-item.active').classList.remove('active')
+            }
+            // if (history.pushState) {
+            //     history.pushState(null, null, `#${currentSection}`);
+            // } else {
+            //     location.hash = currentSection
+            // }
+            document.querySelector(`a[href='#${currentSection}']`).classList.add('active')
         }
-        if (document.querySelector('.app-page__menu-item.active')) {
-            document.querySelector('.app-page__menu-item.active').classList.remove('active')
-        }
-        // if (history.pushState) {
-        //     history.pushState(null, null, `#${currentSection}`);
-        // } else {
-        //     location.hash = currentSection
-        // }
-        document.querySelector(`a[href='#${currentSection}']`).classList.add('active')
+        changeCurrentSection()
+        window.addEventListener('scroll', changeCurrentSection)
     }
-    changeCurrentSection()
-    window.addEventListener('scroll', changeCurrentSection)
 }
 
 if (document.querySelector('.favourites')) {
