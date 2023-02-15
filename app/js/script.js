@@ -19,7 +19,7 @@ if (document.querySelector('.homepage__swiper')) {
     })
 }
 
-if (document.querySelector('.catalog')) {
+if (document.querySelectorAll('.catalog__items').length) {
     let currentSection = 'new'
     const sections = document.querySelectorAll('.catalog__items')
     function changeCurrentSection() {
