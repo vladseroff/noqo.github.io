@@ -26,7 +26,7 @@ if (document.querySelectorAll('.catalog__items').length) {
         let scrollTop = window.scrollY
         Array.from(sections).forEach((el, key) => {
             let element = sections[key]
-            if (element.offsetTop <= scrollTop && currentSection !== element.id) {
+            if (element.offsetTop <= scrollTop + 100 && currentSection !== element.id) {
                 currentSection = element.id
             }
         })
