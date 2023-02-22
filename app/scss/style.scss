@@ -211,6 +211,9 @@
         overflow: hidden;
         padding-left: 482px;
         padding-right: 256px;
+        &.full_right {
+            padding-right: 0;
+        }
     }
     &__rightside {
         flex: none;
@@ -253,7 +256,7 @@
             &:hover {
                 color: $black;
             }
-            &:first-child {
+            &.mb {
                 margin-bottom: 23px;
             }
         }
@@ -398,7 +401,7 @@
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         grid-gap: 70px 20px;
         margin-bottom: 55px;
-        padding-top: 45px;
+        padding-top: 230px;
     }
     &__item {
         text-decoration: none;
@@ -749,6 +752,41 @@
             opacity: 1;
         }
         img {
+            display: block;
+        }
+    }
+}
+
+.partners {
+    .app-page__main {
+        flex-direction: column;
+        padding-top: 220px;
+    }
+    &__title {
+        margin-top: 0;
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-gap: 70px 20px;
+        margin-bottom: 55px;
+    }
+    &__item {
+        background: #fff;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        overflow: hidden;
+        padding: 30px;
+        img {
+            max-width: 100%;
             display: block;
         }
     }

@@ -19,7 +19,7 @@ if (document.querySelector('.homepage__swiper')) {
     })
 }
 
-if (document.querySelectorAll('.catalog__items').length) {
+if (document.querySelectorAll('.catalog__items').length && document.querySelectorAll('.catalog-new').length) {
     let currentSection = 'new'
     let sections = document.querySelectorAll('.catalog__items')
     if (sections && sections.length > 0) {
@@ -125,16 +125,16 @@ if (document.querySelector('.product__like')) {
     })
 }
 
-if (document.querySelector('.catalog__item')) {
-    document.querySelectorAll('.catalog__item').forEach(element => {
-        element.addEventListener('mouseover', () => {
-            document.querySelector('.catalog__preview').classList.add('active')
-        })
-        element.addEventListener('mouseleave', () => {
-            document.querySelector('.catalog__preview').classList.remove('active')
-        })
-    });
-}
+// if (document.querySelector('.catalog__item')) {
+//     document.querySelectorAll('.catalog__item').forEach(element => {
+//         element.addEventListener('mouseover', () => {
+//             document.querySelector('.catalog__preview').classList.add('active')
+//         })
+//         element.addEventListener('mouseleave', () => {
+//             document.querySelector('.catalog__preview').classList.remove('active')
+//         })
+//     });
+// }
 
 if (document.querySelector('.product__slider')) {
     let homepageSwiper = new Swiper('.product__slider', {

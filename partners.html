@@ -11,14 +11,14 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
 
         <title>NOQO</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="dist/style.css?cb=1677078888252">
+        <link rel="stylesheet" href="dist/style.css?cb=1675348494832">
     </head>
-    <body>
+    <body class="black">
         <div class="search">
             <div class="search__close">
                 <img src="./svg/cross.svg" alt="Close">
@@ -30,27 +30,21 @@
                 </button>
             </form>
         </div>
-        <header class="header">
+        <header class="header header__white">
             <a href="index.html" class="header__logo">
-                <img src="./svg/logo.svg" alt="NOQO">
+                <img src="./svg/logo-white.svg" alt="NOQO">
             </a>
-            <div class="header__wrapper">
+            <div class="header__wrapper header__wrapper_row">
                 <div class="header__lang">eng</div>
-                <div class="header__icon header__icon-search">
-                    <img src="./svg/magnific.svg" alt="Search">
-                </div>
                 <a href="favourites.html" class="header__icon header__icon-heart">
-                    <img src="./svg/heart.svg" alt="Favourites">
+                    <img src="./svg/heart-fill.svg" alt="Favourites">
                 </a>
+                <div class="header__icon header__icon-search">
+                    <img src="./svg/magnific-white.svg" alt="Search">
+                </div>
             </div>
         </header>
-        <div class="app-page homepage">
-            <div class="homepage__arrow homepage__arrow-prev">
-                <img src="./svg/arrow.svg" alt="Prev">
-            </div>
-            <div class="homepage__arrow homepage__arrow-next">
-                <img src="./svg/arrow.svg" alt="Next">
-            </div>
+        <div class="app-page partners">
             <div class="app-page__leftside">
                 <div class="app-page__menu">
                     <a class="app-page__menu-item mb" href="catalog-new.html">новинки</a>
@@ -60,27 +54,17 @@
                 </div>
             </div>
             <div class="app-page__main">
-                <div class="swiper homepage__swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img1.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img2.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img3.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img4.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img5.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img6.jpg" alt="Product name">
-                        </div>
-                    </div>
+                <h1 class="partners__title">Наши партнеры</h1>
+                <div class="partners__items">
+                    <a href="index.html" class="partners__item">
+                        <img src="./img/p1.png" alt="Бристоль">
+                    </a>
+                    <a href="index.html" class="partners__item">
+                        <img src="./img/p2.png" alt="X5 Group">
+                    </a>
+                    <a href="index.html" class="partners__item">
+                        <img src="./img/p3.svg" alt="Газпром">
+                    </a>
                 </div>
             </div>
             <div class="app-page__rightside">
@@ -127,6 +111,6 @@
         </div>
         <div class="opt-client">оптовый клиент</div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script src="dist/all.js?cb=1677078888252"></script>
+        <script src="dist/all.js?cb=1675348494832"></script>
     </body>
 </html>
