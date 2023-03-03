@@ -11,14 +11,14 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
 
         <title>NOQO</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="dist/style.css?cb=1677858005493">
+        <link rel="stylesheet" href="dist/style.css?cb=1675348494832">
     </head>
-    <body>
+    <body class="black">
         <div class="search">
             <div class="search__close">
                 <img src="./svg/cross.svg" alt="Close">
@@ -30,7 +30,7 @@
                 </button>
             </form>
         </div>
-        <header class="header">
+        <header class="header header__white">
             <a href="index.html" class="header__logo">
                 <img src="./svg/logo.svg" alt="NOQO">
             </a>
@@ -44,13 +44,7 @@
                 </a>
             </div>
         </header>
-        <div class="app-page homepage">
-            <div class="homepage__arrow homepage__arrow-prev">
-                <img src="./svg/arrow.svg" alt="Prev">
-            </div>
-            <div class="homepage__arrow homepage__arrow-next">
-                <img src="./svg/arrow.svg" alt="Next">
-            </div>
+        <div class="app-page catalog catalog-new">
             <div class="app-page__leftside">
                 <div class="app-page__menu">
                     <a class="app-page__menu-item mb" href="catalog-new.html">новинки</a>
@@ -60,26 +54,26 @@
                 </div>
             </div>
             <div class="app-page__main">
-                <div class="swiper homepage__swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img1.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img2.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img3.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img4.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img5.jpg" alt="Product name">
-                        </div>
-                        <div class="swiper-slide homepage__main-product">
-                            <img src="./img/img6.jpg" alt="Product name">
-                        </div>
+                <div class="catalog__main">
+                    <div class="catalog__items">
+                        <a href="product.html" class="catalog__item">
+                            <div class="catalog__item-img">
+                                <img src="./img/product1.jpg" alt="Product name">
+                            </div>
+                            <div class="catalog__item-text">
+                                <div class="catalog__item-cat">поды</div>
+                                <div class="catalog__item-name">Девайс #1</div>
+                            </div>
+                        </a>
+                        <a href="product.html" class="catalog__item">
+                            <div class="catalog__item-img">
+                                <img src="./img/product2.jpg" alt="Product name">
+                            </div>
+                            <div class="catalog__item-text">
+                                <div class="catalog__item-cat">поды</div>
+                                <div class="catalog__item-name">Девайс #2</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -126,7 +120,8 @@
         <div class="warning-banner">
             <img src="./img/warning.png" alt="Warning">
         </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script src="dist/all.js?cb=1677858005493"></script>
+        <script src="dist/all.js?cb=1675348494832"></script>
     </body>
 </html>

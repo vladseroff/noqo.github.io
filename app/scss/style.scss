@@ -4,42 +4,44 @@
 @import "global";
 @import "typography";
 
-.black {
-    .app-page {
-        &__menu {
-            a,
-            div {
-                color: $grey;
-                &:hover,
-                &.active {
-                    color: $white;
-                }
-            }
-        }
-    }
-    .header {
-        &__lang {
-            color: #7F7F7F;
-            &:hover {
-                color: $white;
-            }
-        }
-    }
-    .opt-client {
-        color: #7F7F7F;
-        &:hover {
-            color: $white;
-        }
-    }
-}
+// .black {
+//     .app-page {
+//         &__menu {
+//             a,
+//             div {
+//                 color: $grey;
+//                 &:hover,
+//                 &.active {
+//                     color: $white;
+//                 }
+//             }
+//         }
+//     }
+//     .header {
+//         &__lang {
+//             color: #7F7F7F;
+//             &:hover {
+//                 color: $white;
+//             }
+//         }
+//     }
+//     .opt-client {
+//         color: #7F7F7F;
+//         &:hover {
+//             color: $white;
+//         }
+//     }
+// }
 
 .warning-banner {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 20px;
+    bottom: 20px;
     pointer-events: none;
+    width: 100px;
     img {
         display: block;
+        width: 100%;
     }
 }
 
@@ -210,7 +212,7 @@
         flex: 1 1 auto;
         overflow: hidden;
         padding-left: 482px;
-        padding-right: 256px;
+        padding-right: 280px;
         &.full_right {
             padding-right: 0;
         }
@@ -218,7 +220,7 @@
     &__rightside {
         flex: none;
         width: 100%;
-        max-width: 256px;
+        max-width: 280px;
         padding: 0 50px;
         position: fixed;
         right: 0;
@@ -237,7 +239,7 @@
             padding-top: 190px;
         }
         &:hover {
-            a {
+            a,div {
                 color: $grey;
             }
         }
@@ -278,7 +280,7 @@
         height: 173px;
         z-index: 6;
         position: absolute;
-        right: 256px;
+        right: 280px;
         top: 0;
         padding-right: 150px;
         &:first-child {
@@ -306,8 +308,10 @@
         position: absolute;
         top: 50%;
         z-index: 99;
+        width: 22px;
         img {
             display: block;
+            width: 100%;
         }
         &-prev {
             left: 50px;
@@ -317,6 +321,9 @@
             img {
                 transform: scale(-1);
             }
+        }
+        @media screen and (max-height: 880px) {
+            top: 62%;
         }
     }
     .swiper {
@@ -443,7 +450,7 @@
         }
         &-name {
             font-size: 23px;
-            color: $white;
+            color: #000;
             font-weight: 700;
         }
         &-cat {
@@ -465,21 +472,30 @@
         position: absolute;
         right: 100px;
         top: 300px;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+            }
+        }
     }
     &__category {
         cursor: pointer;
         color: #7F7F7F;
         font-weight: 300;
         font-size: 23px;
-        margin: 40px 0;
+        margin: 20px 0;
         pointer-events: all;
         text-decoration: none;
+        text-align: right;
+        display: block;
         &.active {
-            color: $white;
+            color: #000;
             font-weight: 500;
         }
         &:hover {
-            color: $white;
+            color: #000;
         }
     }
     &__image {
@@ -517,9 +533,9 @@
     &__main {
         padding: 70px;
         padding-left: 120px;
-        color: $white;
         flex: 1 1 auto;
         margin-left: 614px;
+        color: #000;
     }
     &__body {
         position: relative;
@@ -544,7 +560,7 @@
     &__cat {
         font-size: 23px;
         font-weight: 500;
-        color: #B2B2B2;
+        // color: #B2B2B2;
     }
     &__wrapper {
         display: flex;
@@ -554,7 +570,7 @@
     &__like {
         display: flex;
         align-items: center;
-        color: #B2B2B2;
+        // color: #B2B2B2;
         font-size: 23px;
         font-weight: 300;
         cursor: pointer;
@@ -591,7 +607,7 @@
     &__number {
         font-size: 23px;
         font-weight: 300;
-        color: #B2B2B2;
+        // color: #B2B2B2;
     }
     &__favourite {
         margin-left: 30px;
@@ -609,10 +625,11 @@
         &.active {
             #{$description} {
                 &-switch {
-                    background: $white;
-                    border-color: $white;
+                    background: #000;
+                    border-color: #000;
                     span {
-                        transform: translateX(23px)
+                        transform: translateX(24px);
+                        background: #FFF;
                     }
                 }
                 &-title {
@@ -624,7 +641,7 @@
             }
         }
         &-switch {
-            border: 1px solid #414141;
+            border: 1px solid #000;
             width: 48px;
             height: 24px;
             border-radius: 30px;
@@ -636,7 +653,7 @@
                 display: block;
                 width: 22px;
                 height: 22px;
-                background: #414141;
+                background: #000;
                 transition: .3s ease;
             }
         }
@@ -646,7 +663,7 @@
             align-items: center;
             cursor: pointer;
             font-weight: 300;
-            color: #B2B2B2;
+            // color: #B2B2B2;
         }
         &-body {
             padding-top: 20px;
@@ -658,7 +675,7 @@
             justify-content: space-between;
             // padding: 15px 0;
             font-size: 23px;
-            color: #B2B2B2;
+            // color: #B2B2B2;
             font-weight: 300;
         }
         &-desc {
@@ -764,14 +781,14 @@
     }
     &__title {
         margin-top: 0;
-        color: #fff;
+        color: #000;
         font-size: 30px;
         margin-bottom: 60px;
     }
     &__items {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        grid-gap: 70px 20px;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-gap: 30px 60px;
         margin-bottom: 55px;
     }
     &__item {
@@ -784,7 +801,7 @@
         align-items: center;
         height: 150px;
         overflow: hidden;
-        padding: 30px;
+        // padding: 30px;
         img {
             max-width: 100%;
             display: block;
